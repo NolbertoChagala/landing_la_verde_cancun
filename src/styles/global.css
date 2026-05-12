@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colores extraídos de tu identidad */
+  --color-verde-brand: #7cb342;    /* El verde vibrante del logo */
+  --color-verde-profundo: #1e2f23; /* Para textos y fondos de lujo */
+  --color-crema-logo: #f1f8e8;     /* El fondo sutil de tu logo */
+  --color-negro-suave: #121412;
+}
+
+@layer base {
+  body {
+    /* Cambiamos el blanco por el crema del logo para que todo unifique */
+    @apply bg-crema-logo text-verde-profundo antialiased;
+    font-family: 'Outfit', sans-serif;
+  }
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+}

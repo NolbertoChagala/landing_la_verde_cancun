@@ -1,0 +1,89 @@
+---
+import { Instagram, MapPin, Phone, Mail, Facebook, Users } from 'lucide-astro';
+---
+
+<footer class="bg-verde-profundo py-24 px-6 text-crema-logo relative overflow-hidden">
+    <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-verde-brand/5 rounded-full blur-[100px]"></div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-8 items-start text-left mb-20">
+        
+            <div class="space-y-6">
+                <h2 class="text-3xl font-black tracking-tighter">
+                    La Verde <br/> 
+                    <span class="text-verde-brand font-serif italic font-normal text-2xl">de Cancún</span>
+                </h2>
+                <p class="text-crema-logo/50 text-sm leading-relaxed max-w-xs italic font-medium">
+                    "El toque auténtico que transforma cada bocado en una celebración mexicana."
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <h4 class="text-verde-brand font-black tracking-[0.2em] text-[11px] uppercase">Nuestro equipo</h4>
+                <div class="flex flex-col gap-3 text-sm font-medium text-crema-logo/70">
+                    <p class="flex flex-col">
+                        <span class="text-crema-logo">Angela Mercedes Medina Poot</span>
+                    </p>
+                    <p class="flex flex-col">
+                        <span class="text-crema-logo">Aaron Roman Genchi</span>
+                    </p>
+                    <p class="flex flex-col">
+                        <span class="text-crema-logo">Cristian de Jesus Alvarez torres </span>
+                    </p>
+                    <p class="flex flex-col">
+                        <span class="text-crema-logo">Jhozept Dominique Domínguez Canche</span>
+                    </p>
+                    <p class="flex flex-col">
+                        <span class="text-crema-logo">Rodrigo Benjamin Jiménez Balan</span>
+                    </p>
+                    <p class="flex flex-col">
+                        <span class="text-crema-logo">William Josué Chagala Hernández </span>
+                    </p>
+                    <p class="flex flex-col">
+                        <span class="text-crema-logo">Wilberth Adriel Chávez Velasquez</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h4 class="text-verde-brand font-black tracking-[0.2em] text-[11px] uppercase">Contacto</h4>
+                <div class="flex flex-col gap-4 text-sm font-medium tracking-tight">
+                    <a href="#" class="flex items-center gap-3 hover:text-verde-brand transition-colors">
+                        <MapPin size={16} class="text-verde-brand" /> Cancún, Quintana Roo
+                    </a>
+                    <a href="tel:+529980000000" class="flex items-center gap-3 hover:text-verde-brand transition-colors">
+                        <Phone size={16} class="text-verde-brand" /> +52 998 000 0000
+                    </a>
+                    <a href="mailto:hola@laverdecancun.com" class="flex items-center gap-3 hover:text-verde-brand transition-colors">
+                        <Mail size={16} class="text-verde-brand" /> info@laverdecancun.com
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h4 class="text-verde-brand font-black tracking-[0.2em] text-[11px] uppercase">Comunidad</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-verde-brand hover:border-verde-brand hover:text-verde-profundo transition-all duration-500">
+                        <Instagram size={18} />
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-verde-brand hover:border-verde-brand hover:text-verde-profundo transition-all duration-500">
+                        <Facebook size={18} />
+                    </a>
+                </div>
+                <p class="text-[11px] text-crema-logo/40 leading-relaxed italic">
+                    Atención directa: <br/> Lunes a viernes • 9:00 am - 6:00 pm
+                </p>
+            </div>
+        </div>
+
+        <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-[10px] tracking-[0.2em] opacity-30 font-bold">
+                © 2026 La Verde de Cancún • Todos los derechos reservados
+            </p>
+            <div class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 bg-verde-brand rounded-full animate-pulse"></div>
+                <span class="text-[10px] tracking-[0.1em] opacity-30 font-bold text-balance text-center">Proyecto | La Verde de Cancún • Premium Selection</span>
+            </div>
+        </div>
+    </div>
+</footer>
