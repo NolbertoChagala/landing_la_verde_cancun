@@ -2,7 +2,7 @@
 import '../styles/global.css';
 
 interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
@@ -10,22 +10,32 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="es" class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{title}</title>
-		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
-	</head>
-	<body class="bg-[#F1F8E8] text-[#3F4E4F] antialiased overflow-x-hidden">
-		<slot />
-		<script>
-			const observer = new IntersectionObserver((entries) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) entry.target.classList.add('active');
-				});
-			}, { threshold: 0.1 });
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/La_verde_cancun.ico" />
+        <title>{title}</title>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    </head>
+    <body class="bg-crema-logo text-verde-profundo antialiased overflow-x-hidden font-['Outfit']">
+        <slot />
+        
+        <script>
+            const initReveal = () => {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                        }
+                    });
+                }, { threshold: 0.1 });
 
-			document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-		</script>
-	</body>
+                document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+            };
+
+            initReveal();
+
+            document.addEventListener('astro:after-swap', initReveal);
+        </script>
+    </body>
 </html>
