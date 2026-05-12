@@ -1,98 +1,179 @@
 ---
-import { Menu, X } from 'lucide-astro';
+import { Menu, X } from "lucide-astro";
 ---
 
-<nav id="main-nav" class="fixed w-full z-[100] px-4 md:px-6 h-20 md:h-24 flex items-center transition-all duration-500 ease-in-out">
+<nav
+  id="main-nav"
+  class="fixed w-full z-[100] px-4 md:px-6 h-20 flex items-center transition-all duration-500"
+>
   <div class="max-w-7xl mx-auto w-full flex justify-between items-center">
-    
-    <div class="flex items-center gap-3 group cursor-pointer relative z-[110]">
-      <div class="relative">
-        <div class="w-2 h-2 bg-verde-brand rounded-full animate-ping absolute inset-0"></div>
-        <div class="w-2 h-2 bg-verde-brand rounded-full relative"></div>
+    <!-- BRANDING -->
+    <div class="flex items-center gap-3 relative z-[120]">
+      <div
+        class="w-2 h-2 bg-verde-brand rounded-full animate-ping absolute inset-0"
+      >
       </div>
-      <span class="text-verde-profundo text-[10px] font-black uppercase tracking-[0.4em] group-hover:text-verde-brand transition-colors">
+      <div class="w-2 h-2 bg-verde-brand rounded-full relative"></div>
+      <span
+        class="text-verde-profundo text-[10px] font-black uppercase tracking-[0.4em]"
+      >
         La Verde de Cancún
       </span>
     </div>
 
-    <button id="menu-toggle" class="md:hidden relative z-[110] p-2 text-verde-profundo outline-none" aria-label="Abrir menú">
-      <div id="icon-menu" class="block transition-transform duration-300"><Menu size={28} /></div>
-      <div id="icon-close" class="hidden transition-transform duration-300"><X size={28} /></div>
+    <!-- BOTÓN MÓVIL -->
+    <button
+      id="menu-toggle"
+      class="md:hidden relative z-[120] p-2 text-verde-profundo"
+      aria-label="Menu"
+    >
+      <div id="icon-menu" class="block"><Menu size={28} /></div>
+      <div id="icon-close" class="hidden"><X size={28} /></div>
     </button>
 
-    <div id="nav-menu" class="hidden fixed inset-0 bg-crema-logo/98 z-[100] flex-col items-center justify-center gap-12 opacity-0 transition-all duration-500 md:flex md:relative md:inset-auto md:bg-white/40 md:backdrop-blur-md md:flex-row md:opacity-100 md:px-8 md:py-3 md:rounded-full md:border md:border-white/20 md:shadow-sm md:visible">
-      
-      <a href="#nosotros" class="nav-link text-verde-profundo text-4xl md:text-[10px] font-black md:font-bold uppercase tracking-widest hover:text-verde-brand transition-all">
-        Nosotros
-      </a>
-      <a href="#gastronomia" class="nav-link text-verde-profundo text-4xl md:text-[10px] font-black md:font-bold uppercase tracking-widest hover:text-verde-brand transition-all">
-        Gastronomia
-      </a>
-      <a href="#ingredientes" class="nav-link text-verde-profundo text-4xl md:text-[10px] font-black md:font-bold uppercase tracking-widest hover:text-verde-brand transition-all">
-       Ingredientes
-      </a>
+    <!-- MENÚ OVERLAY CORREGIDO -->
+    <div
+      id="nav-menu"
+      class="hidden fixed inset-0 bg-crema-logo z-[110] opacity-0 transition-all duration-500 md:flex md:relative md:inset-auto md:bg-white/40 md:backdrop-blur-md md:opacity-100 md:visible md:px-8 md:py-3 md:rounded-full md:border md:border-white/20 md:shadow-sm"
+    >
+      <!-- Contenedor interno para centrar el contenido sin chocar con el header -->
+      <div
+        class="flex flex-col justify-center h-full w-full px-10 md:flex-row md:items-center md:gap-10 md:p-0"
+      >
+        <a
+          href="#nosotros"
+          class="group/link py-6 border-b border-verde-profundo/5 md:border-none md:py-0"
+        >
+          <span
+            class="text-[10px] font-black text-verde-brand/40 block md:hidden mb-2"
+            >01</span
+          >
+          <span
+            class="text-4xl md:text-[10px] font-black md:font-bold text-verde-profundo uppercase tracking-tighter md:tracking-widest relative"
+          >
+            Nosotros
+            <span
+              class="hidden md:block absolute -bottom-1 left-0 w-0 h-[1px] bg-verde-brand transition-all group-hover/link:w-full"
+            ></span>
+          </span>
+        </a>
+
+        <a
+          href="#gastronomia"
+          class="group/link py-6 border-b border-verde-profundo/5 md:border-none md:py-0"
+        >
+          <span
+            class="text-[10px] font-black text-verde-brand/40 block md:hidden mb-2"
+            >02</span
+          >
+          <span
+            class="text-4xl md:text-[10px] font-black md:font-bold text-verde-profundo uppercase tracking-tighter md:tracking-widest relative"
+          >
+            Gastronomía
+            <span
+              class="hidden md:block absolute -bottom-1 left-0 w-0 h-[1px] bg-verde-brand transition-all group-hover/link:w-full"
+            ></span>
+          </span>
+        </a>
+
+        <a
+          href="#ingredientes"
+          class="group/link py-6 border-b border-verde-profundo/5 md:border-none md:py-0"
+        >
+          <span
+            class="text-[10px] font-black text-verde-brand/40 block md:hidden mb-2"
+            >03</span
+          >
+          <span
+            class="text-4xl md:text-[10px] font-black md:font-bold text-verde-profundo uppercase tracking-tighter md:tracking-widest relative"
+          >
+            Ingredientes
+            <span
+              class="hidden md:block absolute -bottom-1 left-0 w-0 h-[1px] bg-verde-brand transition-all group-hover/link:w-full"
+            ></span>
+          </span>
+        </a>
+
+        <!-- Redes exclusivas móvil -->
+        <div class="mt-12 md:hidden">
+          <p
+            class="text-[10px] font-black uppercase tracking-[0.3em] text-verde-brand/60 mb-6"
+          >
+            Síguenos
+          </p>
+          <div class="flex gap-8 text-verde-profundo font-bold text-sm">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
 
 <script>
   const initNav = () => {
-    const nav = document.querySelector('#main-nav');
-    const menuToggle = document.querySelector('#menu-toggle');
-    const navMenu = document.querySelector('#nav-menu');
-    const iconMenu = document.querySelector('#icon-menu');
-    const iconClose = document.querySelector('#icon-close');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const nav = document.querySelector("#main-nav");
+    const menuToggle = document.querySelector("#menu-toggle");
+    const navMenu = document.querySelector("#nav-menu");
+    const iconMenu = document.querySelector("#icon-menu");
+    const iconClose = document.querySelector("#icon-close");
+    const navLinks = document.querySelectorAll('a[href^="#"]');
 
     if (!nav || !menuToggle || !navMenu || !iconMenu || !iconClose) return;
 
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       if (window.scrollY > 20) {
-        nav.classList.add('h-16', 'bg-crema-logo/95', 'backdrop-blur-xl', 'shadow-lg');
-        nav.classList.remove('h-20', 'md:h-24');
+        nav.classList.add(
+          "bg-crema-logo/95",
+          "backdrop-blur-xl",
+          "shadow-lg",
+          "h-16",
+        );
+        nav.classList.remove("h-20");
       } else {
-        nav.classList.remove('h-16', 'bg-crema-logo/95', 'backdrop-blur-xl', 'shadow-lg');
-        nav.classList.add('h-20', 'md:h-24');
+        nav.classList.remove(
+          "bg-crema-logo/95",
+          "backdrop-blur-xl",
+          "shadow-lg",
+          "h-16",
+        );
+        nav.classList.add("h-20");
       }
     });
 
     const toggleMenu = () => {
-      const isMobile = window.innerWidth < 768;
-      if (!isMobile) return;
-
-      const isHidden = navMenu.classList.contains('hidden');
-      
+      if (window.innerWidth >= 768) return;
+      const isHidden = navMenu.classList.contains("hidden");
       if (isHidden) {
-        navMenu.classList.remove('hidden');
+        navMenu.classList.remove("hidden");
         setTimeout(() => {
-          navMenu.classList.add('opacity-100');
-          iconMenu.classList.add('hidden');
-          iconClose.classList.remove('hidden');
+          navMenu.classList.add("opacity-100");
+          iconMenu.classList.add("hidden");
+          iconClose.classList.remove("hidden");
         }, 10);
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = "hidden";
       } else {
-        // Cerrar con suavidad
-        navMenu.classList.remove('opacity-100');
-        iconMenu.classList.remove('hidden');
-        iconClose.classList.add('hidden');
+        navMenu.classList.remove("opacity-100");
+        iconMenu.classList.remove("hidden");
+        iconClose.classList.add("hidden");
         setTimeout(() => {
-          navMenu.classList.add('hidden');
-          document.body.style.overflow = '';
+          navMenu.classList.add("hidden");
+          document.body.style.overflow = "";
         }, 500);
       }
     };
 
-    menuToggle.addEventListener('click', toggleMenu);
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
+    menuToggle.addEventListener("click", toggleMenu);
+    navLinks.forEach((link) =>
+      link.addEventListener("click", () => {
         if (window.innerWidth < 768) toggleMenu();
-      });
-    });
+      }),
+    );
   };
 
   initNav();
-  document.addEventListener('astro:after-swap', initNav);
+  document.addEventListener("astro:after-swap", initNav);
 </script>
 
 <style>
@@ -100,17 +181,5 @@ import { Menu, X } from 'lucide-astro';
     #nav-menu {
       display: flex !important;
     }
-    .nav-link { position: relative; }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background-color: #7cb342;
-      transition: width 0.3s ease;
-    }
-    .nav-link:hover::after { width: 100%; }
   }
 </style>
