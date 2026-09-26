@@ -1,46 +1,104 @@
-# Astro Starter Kit: Basics
+# 🌿 La Verde Cancún — Landing Page
 
-```sh
-npm create astro@latest -- --template basics
+Landing page moderna, rápida y totalmente adaptable (*responsive*) desarrollada para **La Verde Cancún**. El proyecto implementa una arquitectura orientada a componentes con renderizado ultrarrápido y optimización de recursos visuales.
+
+🔗 **Demo en vivo:** [https://landing-la-verde-cancun.vercel.app](https://landing-la-verde-cancun.vercel.app)
+
+---
+
+## 🚀 Tecnologías
+
+- **[Astro](https://astro.build/)** — Framework web centrado en contenido con enfoque en cero JavaScript por defecto.
+- **[Tailwind CSS](https://tailwindcss.com/)** — Framework de utilidades CSS para diseño responsive y estilos consistentes.
+- **TypeScript / JavaScript** — Tipado estático y lógica de componentes.
+- **Vercel** — Infraestructura de despliegue continuo (CI/CD).
+
+---
+
+## 🛠️ Características Principales
+
+- ⚡ **Carga ultrarrápida:** Arquitectura de islas y mínima carga de scripts.
+- 📱 **Diseño 100% responsive:** Experiencia fluida en dispositivos móviles, tablets y escritorio.
+- 🧭 **Navegación clara:** Estructura de secciones diseñada para promocionar productos, servicios y enlaces de contacto/redes sociales.
+
+---
+
+## 💻 Instalación y Uso Local
+
+Sigue estos pasos para clonar y ejecutar el entorno de desarrollo en tu máquina:
+
+1. **Clonar el repositorio:**
+
+```bash
+   git clone https://github.com/NolbertoChagala/landing_la_verde_cancun.git
+   cd landing_la_verde_cancun
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+2. **Instalar dependencias:**
 
-## 🚀 Project Structure
+```bash
+   npm install --legacy-peer-deps
+```
 
-Inside of your Astro project, you'll see the following folders and files:
+3. **Iniciar el servidor local:**
+
+```bash
+   npm run dev
+```
+
+   Abre [http://localhost:4321](http://localhost:4321) en tu navegador para ver la aplicación.
+
+4. **Compilar para producción:**
+
+```bash
+   npm run build
+```
+
+5. **Previsualizar la compilación localmente:**
+
+```bash
+   npm run preview
+```
+
+---
+
+## 📁 Estructura del Proyecto
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+public/
+├── img/
+│   ├── Comidas/
+│   ├── Ingredientes/
+│   ├── Comida.webp
+│   └── La_Verde_Cancun.webp
+├── favicon.ico
+├── favicon.svg
+└── La_Verde_Cancun.ico
+
+src/
+├── assets/
+│   ├── astro.svg
+│   └── background.svg
+├── components/
+│   ├── About.astro
+│   ├── CardIngrediente.astro
+│   ├── Footer.astro
+│   ├── MenuMomentos.astro
+│   └── Navbar.astro
+├── layouts/
+│   └── Layout.astro
+├── pages/
+│   └── index.astro
+└── styles/
+    └── global.css
+
+.gitignore
+.npmrc
+astro.config.mjs
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## 👨‍💻 Autor
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Desarrollado por [Nolberto Chagala](https://github.com/NolbertoChagala).
